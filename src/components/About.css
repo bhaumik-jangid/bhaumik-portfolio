@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.authorimage{
+  border-radius: 0%;
+}
+
 /* ============== FULLSCREEN INTRO TEXT (UNCHANGED) ============== */
 .about-intro-screen {
   height: 100vh;

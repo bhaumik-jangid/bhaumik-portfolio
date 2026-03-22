@@ -88,13 +88,13 @@
 }
 
 /* ===============================
-   HEADINGS (Education, Projects...)
+   HEADINGS
 ================================ */
 .resume-heading {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .resume-heading h3 {
@@ -102,7 +102,6 @@
   font-weight: 700;
 }
 
-/* ICON BOX */
 .icon-box {
   width: 48px;
   height: 48px;
@@ -120,100 +119,419 @@
 }
 
 /* ===============================
-   EDUCATION / PROJECT / CARD
+   EDUCATION SECTION
 ================================ */
 .resume-section-block {
   margin: 60px 0;
-}
-
-.resume-list {
-  display: grid;
-  gap: 22px;
-  padding-left: 4px;
-}
-
-.resume-card {
+  padding: 32px;
   background: var(--resume-card);
-  border-radius: 16px;
-  padding: 18px 24px;
+  border-radius: 20px;
   border: 1px solid var(--resume-border);
-  box-shadow: 0 0 12px var(--resume-border-glow);
-  transition: 0.3s ease;
+  box-shadow: 0 8px 32px var(--resume-border-glow);
 }
 
-.resume-card:hover {
-  transform: translateX(6px);
-  box-shadow: 0 8px 24px var(--resume-accent-glow);
+/* Education Cards Grid */
+.education-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 0;
 }
 
-.resume-card h4 {
-  font-size: 1.2rem;
-  margin-bottom: 6px;
+.education-card-main {
+  background: var(--resume-glass);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--resume-glass-border);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 16px var(--resume-border-glow);
+  cursor: pointer;
+  position: relative;
+}
+
+.education-card-main:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px var(--resume-accent-glow);
+  border-color: var(--resume-accent);
+}
+
+.education-card-main.expanded {
+  grid-column: span 1;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-left: 4px solid;
+  background: linear-gradient(135deg, var(--resume-glass), rgba(255,255,255,0.1));
+  position: relative;
+}
+
+.card-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--resume-accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.education-card-main:hover .card-header::after {
+  opacity: 1;
+}
+
+/* Logo Container */
+.logo-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--resume-card);
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 6px;
+}
+
+.education-card-main:hover .logo-container {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 8px 16px var(--resume-accent-glow);
+}
+
+.college-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.card-title-section {
+  flex: 1;
+}
+
+.card-title-section h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-period {
+  font-size: 0.85rem;
+  opacity: 0.7;
   font-weight: 600;
 }
 
-.resume-card-school {
-  opacity: 0.8;
-  margin-bottom: 4px;
+.card-score {
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.resume-card-period {
-  font-size: 0.95rem;
-  opacity: 0.85;
+.education-card-main:hover .card-score {
+  transform: scale(1.15);
 }
 
-/* ===============================
-   PROJECT LIST
-================================ */
-.project-list {
-  list-style: none;
-  padding-left: 6px;
-  margin-bottom: 60px;
+/* Institution Row */
+.card-institution-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(124,58,237,0.02));
+  border-top: 1px solid var(--resume-border);
 }
 
-.project-list li {
-  margin-bottom: 10px;
-  padding-left: 18px;
-  position: relative;
-  opacity: 0.88;
-  line-height: 1.4rem;
-}
-
-.project-list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
+.institution-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.7;
   color: var(--resume-accent);
 }
 
+.institution-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--resume-text);
+}
+
+.card-description {
+  padding: 16px 20px;
+  border-top: 1px solid var(--resume-border);
+  border-bottom: 1px solid var(--resume-border);
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* Performance Breakdown */
+.card-breakdown {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.05), rgba(124,58,237,0.02));
+}
+
+.breakdown-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.breakdown-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.breakdown-item {
+  display: grid;
+  grid-template-columns: 45px 1fr 40px;
+  align-items: center;
+  gap: 10px;
+}
+
+.breakdown-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.breakdown-bar {
+  height: 6px;
+  background: var(--resume-border);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.breakdown-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 8px currentColor;
+}
+
+.breakdown-score {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: right;
+  color: var(--resume-accent);
+}
+
+/* Expand Button */
+.expand-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.education-card-main:hover .expand-btn {
+  opacity: 1;
+  background: rgba(124, 58, 237, 0.15);
+}
+
+.expand-btn:hover {
+  background: rgba(124, 58, 237, 0.25);
+}
+
+/* Expandable Details */
+.card-details-expanded {
+  overflow: hidden;
+  border-top: 1px solid var(--resume-border);
+}
+
+.expanded-content {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(124,58,237,0.02));
+  animation: slideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.expanded-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  color: var(--resume-text);
+}
+
 /* ===============================
-   SKILL TAGS
+   CATEGORIZED SKILLS
 ================================ */
 .resume-skills {
   margin-top: 50px;
 }
 
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.skill-category {
+  background: var(--resume-card);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--resume-border);
+  box-shadow: 0 0 12px var(--resume-border-glow);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px var(--resume-accent-glow);
+  border-color: var(--resume-accent);
+}
+
+.category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--resume-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 18px;
+  gap: 10px;
 }
 
 .skill-chip {
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 12px;
   font-weight: 600;
+  font-size: 0.9rem;
   background: var(--resume-chip);
   border: 1px solid var(--resume-chip-border);
   color: var(--resume-chip-text);
   box-shadow: 0 0 10px var(--resume-chip-glow);
-  transition: 0.25s;
+  transition: all 0.25s ease;
 }
 
 .skill-chip:hover {
-  transform: translateY(-3px) scale(1.06);
+  transform: translateY(-3px) scale(1.08);
   box-shadow: 0 0 18px var(--resume-chip-glow);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 768px) {
+  .resume-section-block {
+    padding: 20px;
+  }
+
+  .education-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .card-header {
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .card-title-section {
+    flex: 0 1 100%;
+  }
+
+  .logo-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .expand-btn {
+    opacity: 1;
+  }
+
+  .skills-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-container {
+    padding: 0 16px;
+  }
+
+  .resume-section-block {
+    padding: 16px;
+    margin: 40px 0;
+  }
+
+  .education-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    padding: 14px;
+  }
+
+  .logo-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-score {
+    font-size: 1.4rem;
+  }
+
+  .expand-btn {
+    top: 12px;
+    right: 12px;
+    padding: 6px;
+  }
+
+  .breakdown-item {
+    grid-template-columns: 40px 1fr 35px;
+    gap: 8px;
+  }
+
+  .skills-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-chip {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
 }
 
 /* ===============================

@@ -8,20 +8,25 @@ interface SkillRow {
 }
 
 const SKILLS = [
-  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "C", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
   { name: "C++", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
-  { name: "Java", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+
   { name: "HTML", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-  { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-  { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-  { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "Tailwind CSS", logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
+
+  { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+  { name: "Express.js", logo: "https://cdn.simpleicons.org/express/ffffff" },
+  { name: "Django", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" },
+
   { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-  { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-  { name: "TensorFlow", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
-  { name: "PyTorch", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
-  { name: "OpenCV", logo: "https://upload.wikimedia.org/wikipedia/commons/3/32/OpenCV_Logo_with_text_svg_version.svg" },
+  { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+
+  { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" }
 ];
 
 const ROWS: SkillRow[][] = [
@@ -29,19 +34,20 @@ const ROWS: SkillRow[][] = [
     {
       title: "Programming Languages",
       items: [
-        { name: "Python", level: 95 },
         { name: "C", level: 80 },
         { name: "C++", level: 85 },
-        // { name: "Java", level: 70 },
+        { name: "JavaScript", level: 90 },
+        { name: "Python", level: 95 },
       ],
     },
     {
-      title: "Web Technologies",
+      title: "Frontend",
       items: [
         { name: "HTML", level: 95 },
         { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "React", level: 80 },
+        { name: "Tailwind CSS", level: 80 },
+        { name: "React Js", level: 80 },
+        { name: "Next Js", level: 75 },
       ],
     },
     {
@@ -49,15 +55,16 @@ const ROWS: SkillRow[][] = [
       items: [
         { name: "MySQL", level: 80 },
         { name: "MongoDB", level: 75 },
+        { name: "PostgreSQL", level: 70 },
         { name: "Git", level: 85 },
       ],
     },
     {
-      title: "Frameworks & Libraries",
+      title: "Backend",
       items: [
-        { name: "TensorFlow", level: 70 },
-        { name: "PyTorch", level: 75 },
-        { name: "OpenCV", level: 80 },
+        { name: "Express.js", level: 80 },
+        { name: "Django", level: 75 },
+        { name: "Node.js", level: 70 },
       ],
     },
   ],
@@ -66,20 +73,18 @@ const ROWS: SkillRow[][] = [
       title: "Core Concepts",
       items: [
         { name: "Data Structures & Algorithms", level: 95 },
-        { name: "Machine Learning", level: 90 },
-        { name: "Deep Learning", level: 88 },
-        { name: "YOLO Object Detection", level: 80 },
-        { name: "Explainable AI (XAI)", level: 75 },
+        { name: "DBMS", level: 90 },
+        { name: "Computer Networks", level: 88 },
+        { name: "Operating Systems", level: 80 },
       ],
     },
     {
       title: "Soft Skills",
       items: [
-        { name: "Teamwork", level: 90 },
         { name: "Problem Solving", level: 95 },
-        { name: "Creativity", level: 92 },
+        { name: "Team Player", level: 90 },
+        { name: "Quick Learner", level: 92 },
         { name: "Adaptability", level: 88 },
-        { name: "Communication", level: 85 },
       ],
     },
   ],
