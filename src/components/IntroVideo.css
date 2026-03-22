@@ -44,7 +44,8 @@
 }
 .intro-progress {
   position: absolute;
-  bottom: 120px; /* was too low, pulling it UP */
+  bottom: 120px;
+}
 
 
 /* PROGRESS TRACK (background) */
