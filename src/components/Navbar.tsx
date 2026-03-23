@@ -12,7 +12,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Home','About','Projects', 'Skills', 'Resume', 'Contact'];
+  const navItems = ['Home', 'About', 'Projects', 'Skills', 'Resume', 'Contact'];
 
   const scrollToSection = (item: string) => {
     const id = item.toLowerCase();
@@ -28,11 +28,10 @@ export function Navbar() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-3 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-white/90 dark:bg-black/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/10'
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-3 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+          ? 'bg-white/90 dark:bg-black/80 backdrop-blur-xl border-b border-gray-200 dark:border-white/10'
+          : 'bg-transparent'
+          }`}
       >
         <div className="relative w-full px-6 py-4 flex items-center justify-center">
 
@@ -43,7 +42,7 @@ export function Navbar() {
             className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-3"
           >
             {/* BJ Logo (smaller circle) */}
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 p-1 to-purple-600 flex items-center justify-left shrink-0">
+            <div className="w-20 h-20 aspect-square rounded-full bg-gradient-to-br p-2 from-blue-500 to-purple-600 flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-lg md:text-xl">BJ</span>
             </div>
 
@@ -53,7 +52,7 @@ export function Navbar() {
                 Bhaumik Jangid
               </span>
               <span className="text-blue-500 dark:text-purple-100 font-medium text-sm md:text-base">
-                ML • AI • Developer
+                Full stack • Developer
               </span>
             </div>
           </motion.div>

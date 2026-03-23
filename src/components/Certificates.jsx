@@ -4,15 +4,17 @@ import "./Certificates.css";
 
 const CERTS = {
   tech: [
-    { title: "Flipkart Hackathon", org: "Flipkart", date: "2022", img: "/certs/flipkart.jpg" },
-    { title: "Solution Challenge", org: "Google Developers", date: "2023", img: "/certs/hack2skill.png" },
-    { title: "ADira", org: "SCET AI Club", date: "2025", img: "/certs/adira.png" },
+    { title: "Cloud Computing", org: "NPTEL", date: "Oct 2025", img: "/certs/cloudComputing.jpg" },
+    { title: "Build Generative AI Apps and Solutions with No-Code Tools", org: "Infosys", date: "Aug 2025", img: "/certs/AI.jpg" },
+    { title: "Data Structures & Algorithms", org: "Neo colab", date: "Dec 2024", img: "/certs/DSA.jpg" },
+    { title: "Build Dynamic User Interfaces (UI) for Websites", org: "Google", date: "Oct 2024", img: "/certs/UIUX.jpg" },
+    { title: "React JS", org: "Cipherschools", date: "Jul 2024", img: "/certs/Reactjs.jpg" },
+    { title: "Python & Django", org: "Cipherschools", date: "Jul 2024", img: "/certs/Django.jpg" },
   ],
-  other: [
-    { title: "Codathon", org: "SCET Tech Fest", date: "2025", img: "/certs/codathon.png" },
-    { title: "Bugbuzz", org: "SCET Tech Fest", date: "2025", img: "/certs/bugbuzz.png" },
-    { title: "Dataloom", org: "SCET", date: "2024", img: "/certs/dataloom.png" },
-  ],
+  experience: [
+    { title: "Machine Learning with Data Science Training", org: "Cipherschools", date: "Jul 2025", img: "/certs/AIML.jpg" },
+    { title: "Cipherthon 2.0 Hackathon", org: "Cipherschools", date: "Feb 2024", img: "/certs/cipherthon.jpg" },
+  ]
 };
 
 export default function Certificates() {
@@ -36,18 +38,18 @@ export default function Certificates() {
           </span>
         </h2>
         <p className="cert-subtitle">
-          Explore my achievements — both technical & beyond.
+          Explore my achievements...both technical & beyond.
         </p>
 
         {/* TABS */}
         <div className="cert-tabs">
-          {["tech", "other"].map((t) => (
+          {["tech", "experience"].map((t) => (
             <button
               key={t}
               onClick={() => setTab(t)}
               className={`cert-tab ${tab === t ? "active" : ""}`}
             >
-              {t === "tech" ? "Technical" : "Other"}
+              {t === "tech" ? "Technical" : "Experience"}
             </button>
           ))}
         </div>

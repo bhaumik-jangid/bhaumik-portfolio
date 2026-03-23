@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import "./Skills.css";
+import { Sparkles, Zap } from "lucide-react";
 
 interface SkillRow {
   title: string;
@@ -156,7 +157,7 @@ export const Skills: React.FC = () => {
         </h2>
         <div className="skills-underline" />
         <p className="skills-description">
-          ✨ Technical expertise blended with creativity, explore my core competencies below.
+          <Sparkles className="w-4 h-4 inline-block text-blue-400 mr-2" /> A fusion of technical expertise and creativity.....see my core strengths below.
         </p>
       </motion.div>
 

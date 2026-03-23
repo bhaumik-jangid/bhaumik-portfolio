@@ -58,14 +58,10 @@ export default function App() {
                 <Home theme={theme} />
 
                 <About />
-                {/* <Team theme={theme} /> */}
-                <Projects theme={theme} />
-
-                {/* PASS FUNCTION TO GALLERY BUTTON */}
-                {/* <Gallery theme={theme} onOpenGalleryPage={() => setOpenGalleryPage(true)} /> */}
-
 
                 <Skills theme={theme} />
+
+                <Projects theme={theme} />
                 <Resume theme={theme} />
                 <Certificates theme={theme} />
                 {/* <Blog theme={theme} /> */}
@@ -81,7 +77,7 @@ export default function App() {
         <footer className="relative border-t border-gray-200 dark:border-white/10 py-8">
           <div className="max-w-7xl mx-auto px-6 text-center">
             <p className="text-gray-600 dark:text-white/60">
-              © 2026 Bhaumik Jangid.
+              © 2026 Bhaumik Jangid |  All rights reserved
             </p>
           </div>
         </footer>

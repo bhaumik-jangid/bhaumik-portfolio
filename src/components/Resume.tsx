@@ -121,7 +121,7 @@ export function Resume() {
         </motion.div>
 
         {/* PROFILE BOX */}
-        <motion.div
+        {/* <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -161,7 +161,7 @@ export function Resume() {
             and end-to-end AI deployment. Skilled in Python, TensorFlow, PyTorch,
             and always driven to build impactful solutions.
           </motion.p>
-        </motion.div>
+        </motion.div> */}
 
         {/* EDUCATION SECTION */}
         <motion.div
@@ -298,7 +298,7 @@ export function Resume() {
         </motion.div>
 
         {/* SKILLS */}
-        <motion.div
+        {/* <motion.div
           variants={fadeRight}
           initial="hidden"
           whileInView="visible"
@@ -346,7 +346,7 @@ export function Resume() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

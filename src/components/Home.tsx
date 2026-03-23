@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import "./Home.css";
+import { MapPin, Briefcase, Mail } from 'lucide-react';
 
 const githubLogo = "/github.png";
 const linkedinLogo = "/linkedin.png";
@@ -17,13 +18,12 @@ interface HeroProps {
 
 export function Home({ theme }: HeroProps) {
   const roles = [
-    "AI Enthusiast",
-    "Machine Learning Engineer",
-    "Deep Learning Expert",
-    "Computer Vision Researcher",
-    "Developer",
+    "Full Stack Developer",
+    "Scalable Backend Builder",
+    "Next.js Specialist",
+    "DSA Enthusiast",
+    "Tech Explorer",
   ];
-
   const connectLinks = [
     { img: linkedinLogo, link: "https://www.linkedin.com/in/bhaumik-jangid/" },
     { img: gmailLogo, link: "mailto:bhaumikjangid@gmail.com" },
@@ -82,9 +82,7 @@ export function Home({ theme }: HeroProps) {
         </motion.p>
 
         <motion.p className="hero-intro" variants={itemVariants}>
-          Creating AI-powered solutions. 
-          Building modern web experiences. 
-          Solving real-world problems with technology.
+          Crafting scalable backend systems. Building modern web experiences. Solving problems with efficient algorithms.
         </motion.p>
 
         <motion.div className="hero-roles" variants={itemVariants}>
@@ -95,15 +93,24 @@ export function Home({ theme }: HeroProps) {
           ))}
         </motion.div>
 
+
         <motion.div className="hero-info" variants={itemVariants}>
           {[
-            { label: "📍 Location", value: "Saharanpur, Uttar Pradesh, India" },
-            { label: "💼 Expertise", value: "Backend Development, Problem Solving" },
-            { label: "📞 Contact", value: "bhaumikjangid@gmail.com" },
+            { icon: MapPin, label: "Location", value: "Saharanpur, Uttar Pradesh, India" },
+            { icon: Briefcase, label: "Expertise", value: "Backend Development, Problem Solving" },
+            { icon: Mail, label: "Contact", value: "bhaumikjangid@gmail.com" },
           ].map((info, i) => (
-            <motion.div key={i} className="info-card" whileHover={{ scale: 1.05, y: -3 }} variants={itemVariants}>
-              <h4>{info.label}</h4>
-              <p>{info.value}</p>
+            <motion.div
+              key={i}
+              className="info-card w-full sm:w-auto max-w-xs"
+              whileHover={{ scale: 1.05, y: -3 }}
+              variants={itemVariants}
+            >
+              <div className="flex items-center gap-2">
+                <info.icon className="w-5 h-5 text-blue-400" />
+                <h4>{info.label}</h4>
+              </div>
+              <p className="text-sm break-words ml-7">{info.value}</p>
             </motion.div>
           ))}
         </motion.div>
