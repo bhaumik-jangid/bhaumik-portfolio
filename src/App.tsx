@@ -9,6 +9,7 @@ import { Skills } from "./components/Skills";
 import Certificates from "./components/Certificates"; 
 import { Resume } from "./components/Resume";
 import { Contact } from "./components/Contact";
+import Achievement from "./components/Achievement";
 
 export default function App() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
@@ -41,6 +42,7 @@ export default function App() {
             <About />
             <Skills />
             <Projects/>
+            <Achievement/>
             <Resume/>
             <Certificates/>
             <Contact/>
