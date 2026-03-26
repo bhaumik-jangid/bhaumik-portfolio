@@ -130,8 +130,8 @@ export function About() {
   /* ===== IMAGE + TEXT ===== */
   const getImageWidth = () =>
     scrollProgress < 0.2 ? 100 :
-    scrollProgress < 0.6 ? 100 - ((scrollProgress - 0.4) / 0.2) * 50 :
-    50;
+      scrollProgress < 0.6 ? 100 - ((scrollProgress - 0.4) / 0.2) * 50 :
+        50;
 
   const NAVBAR_HEIGHT = 80;
 
@@ -142,8 +142,8 @@ export function About() {
 
   const getTextOpacity = () =>
     scrollProgress < 0.4 ? 0 :
-    scrollProgress < 0.6 ? (scrollProgress - 0.4) / 0.2 :
-    1;
+      scrollProgress < 0.6 ? (scrollProgress - 0.4) / 0.2 :
+        1;
 
   return (
     <section id="about" className="about-wrapper">
@@ -162,7 +162,7 @@ export function About() {
             className="about-image"
             style={{ width: `${getImageWidth()}%`, transform: getImageTransform() }}
           >
-            <img src="./temp.jpg" alt="Profile" className="authorimage"/>
+            <img src="./temp.jpg" alt="Profile" className="authorimage" />
           </div>
 
           {/* INFO PANEL */}
@@ -185,19 +185,18 @@ export function About() {
               </h2>
 
               <p>
-                I’m Bhaumik Jangid, a tech-driven learner passionate about building real-world solutions.
-                I enjoy exploring AI, machine learning, and innovative software development.
-                I’m eager to contribute my skills and grow in a challenging professional environment.
+                I’m a backend-focused developer who enjoys building the parts of software most people never see but absolutely depend on. 
+                APIs, authentication systems, data flows, and backend services that quietly keep everything running.
               </p>
 
               <p>
-                Beyond code, I enjoy exploring design, experimenting with motion and interaction,
-                blending creativity with technical precision. My goal is to build solutions that not only perform — but also inspire.
+                I like working close to the core of an application designing how systems communicate, how data moves, and how access is controlled. 
+                Clean architecture, modular services, and reliable APIs are the things I spend most of my time thinking about.
               </p>
 
               <p>
-                4th-year B.Tech AI Engineering student with hands-on experience in ML & DL Projects.
-                Proficient in Python, PyTorch, TensorFlow, and data preprocessing. Seeking internship opportunities to contribute to impactful AI solutions.
+                Right now I’m studying Computer Science while actively building backend systems using Node.js, Express, and modern web technologies. 
+                My goal is simple: build software that is not just functional, but structured well enough that other developers can extend, maintain, and rely on it.
               </p>
             </div>
           </div>

@@ -66,10 +66,10 @@ export function Contact() {
 
   const quickLinks = [
     { icon: Github, url: "https://github.com/bhaumik-jangid" },
-    { icon: Linkedin, link: "https://www.linkedin.com/in/bhaumik-jangid/" },
-    { icon: Mail, link: "mailto:bhaumikjangid@gmail.com" },
-    { icon: MessageCircle, link: "https://wa.me/+7678126653" },
-    { icon: Instagram, link: "https://www.instagram.com/your_shadow047/" },
+    { icon: Linkedin, url: "https://www.linkedin.com/in/bhaumik-jangid/" },
+    { icon: Mail, url: "mailto:bhaumikjangid@gmail.com" },
+    { icon: MessageCircle, url: "https://wa.me/+7678126653" },
+    { icon: Instagram, url: "https://www.instagram.com/your_shadow047/" },
   ];
 
   return (

@@ -5,61 +5,37 @@ import "./projects.css";
 
 const PROJECTS = [
   {
-    title: "Mammogram Malignancy Detector",
-    desc: "Hybrid CNN + YOLOv8 ensemble for full-image breast cancer detection with ROI preprocessing and sliding-window inference.",
-    ss: "/mamo.png",
-    tech: ["TensorFlow", "Keras", "OpenCV", "YOLOv8"],
+    title: "Resolve",
+    desc: "Customer support chat system - A web-based platform for managing customer support interactions through real-time chat functionality.",
+    ss: "/project/resolve.jpg",
+    tech: ["JavaScript", "React", "Node.js", "Express.js", "Vercel"],
+    live: "https://resolve-rose.vercel.app",
+    code: "https://github.com/bhaumik-jangid/resolve"
+  },
+  {
+    title: "Sentinel",
+    desc: "A full-stack moderated social media platform with content moderation, Q&A, image sharing, and community features.",
+    ss: "/project/sentinal.jpg",
+    tech: ["Next.js 14", "Node.js", "Express.js", "MongoDB"],
     live: "#",
-    code: "https://github.com/kunjdesai/mammo-detector",
+    code: "https://github.com/bhaumik-jangid/sentinel"
   },
   {
-    title: "Mental Health Analyzer",
-    desc: "NLP-based system that analyzes user text for anxiety, stress, and depression indicators.",
-    ss: "/mentalhealth.jpg",
-    tech: ["Python", "Transformers", "NLTK", "scikit-learn"],
-    live: "https://mental-health-analyzer.streamlit.app/",
-    code: "https://github.com/kunj2803/Mental-Health-Analyzer",
+    title: "HarmonyAI",
+    desc: "AI-powered stress relief chatbot designed to provide mental wellness support and emotional assistance through intelligent conversation.",
+    ss: "/project/harmony.png",
+    tech: ["Next.js", "TypeScript", "Gemini API", "JavaScript", "Vercel"],
+    live: "https://harmony-ai-rust.vercel.app",
+    code: "https://github.com/bhaumik-jangid/harmonyAI",
   },
   {
-    title: "Indian Sign Language Interpreter",
-    desc: "Real-time gesture recognition using Mediapipe + TensorFlow for sign-to-text translation.",
-    ss: "/ISL.png",
-    tech: ["Mediapipe", "TensorFlow", "React", "Flask"],
+    title: "myauth – Authentication Service",
+    desc: "A Next.js-based authentication service built with TypeScript and JavaScript, providing secure user authentication and session management.",
+    ss: "/project/myauth.jpg",
+    tech: ["TypeScript", "JavaScript", "Next.js", "CSS"],
     live: "#",
-    code: "https://github.com/kunjdesai/ISL-Interpreter",
-  },
-  {
-    title: "Portfolio Website",
-    desc: "Modern portfolio built with React + Framer Motion with smooth animations and clean UI.",
-    ss: "/portfolio.jpg",
-    tech: ["React", "Framer Motion", "Tailwind CSS"],
-    live: "https://kunj-desai.vercel.app/",
-    code: "https://github.com/kunj2803/Kunj-Portfolio",
-  },
-  {
-    title: "DocuChat – Gemini AI Chatbot",
-    desc: "Gemini-powered PDF analyzer that answers queries from uploaded documents.",
-    ss: "/Docuchat.png",
-    tech: ["Gemini API", "LangChain", "Python", "Streamlit"],
-    live: "https://docuchat-chatbot.streamlit.app/",
-    code: "https://github.com/kunj2803/Docuchat-Chatbot",
-  },
-  {
-    title: "ProfileX – Data Profiler",
-    desc: "Smart data profiling dashboard for CSV datasets — summary, visualization, and cleaning.",
-    ss: "/ProfileX.png",
-    tech: ["Streamlit", "Pandas", "Plotly"],
-    live: "https://profilex.streamlit.app/",
-    code: "https://github.com/kunjdesai/ProfileX",
-  },
-  {
-    title: "Breast Cancer Prediction",
-    desc: "ML pipeline using SVC, RF, and XGBoost with SMOTE for dataset balancing.",
-    ss: "/breastpred.jpg",
-    tech: ["scikit-learn", "XGBoost", "Pandas"],
-    live: "#",
-    code: "https://github.com/kunjdesai/BreastCancerPrediction",
-  },
+    code: "https://github.com/bhaumik-jangid/authentication-service",
+  }
 ];
 
 const fadeUp = {
