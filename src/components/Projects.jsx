@@ -23,7 +23,7 @@ const PROJECTS = [
   {
     title: "HarmonyAI",
     desc: "AI-powered stress relief chatbot designed to provide mental wellness support and emotional assistance through intelligent conversation.",
-    ss: "/project/harmony.png",
+    ss: "/project/harmony.jpg",
     tech: ["Next.js", "TypeScript", "Gemini API", "JavaScript", "Vercel"],
     live: "https://harmony-ai-rust.vercel.app",
     code: "https://github.com/bhaumik-jangid/harmonyAI",
