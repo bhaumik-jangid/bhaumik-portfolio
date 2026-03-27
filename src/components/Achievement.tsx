@@ -60,7 +60,7 @@ const getIcon = (type?: string) => {
 
 export default function Achievement() {
     return (
-        <section className="w-full py-20 px-6 md:px-16 bg-white dark:bg-black relative overflow-hidden">
+        <section id="achievements" className="w-full py-20 px-6 md:px-16 bg-white dark:bg-black relative overflow-hidden">
             {/* Background Glow Effect */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/5 dark:bg-blue-600/5 rounded-full blur-3xl"></div>
